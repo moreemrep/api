@@ -1,0 +1,12 @@
+enum Tipo {
+  FEMININA
+  MASCULINA
+  MISTA
+}
+
+type Republica implements Node {
+  id: ID!
+  nome: String
+  tipo: Tipo
+  distancia: Int
+}

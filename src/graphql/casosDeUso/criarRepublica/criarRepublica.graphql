@@ -1,0 +1,11 @@
+input CriarRepublicaInput {
+  nome: String!
+  endereco: String!
+  localizacao: [Float!]!
+  tipo: Tipo!
+  descricao: String!
+}
+
+type Mutation {
+  criarRepublica(republica: CriarRepublicaInput!): ResponsePayload!
+}
