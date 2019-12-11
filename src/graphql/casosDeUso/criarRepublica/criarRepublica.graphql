@@ -4,8 +4,9 @@ input CriarRepublicaInput {
   localizacao: [Float!]!
   tipo: Tipo!
   descricao: String!
+  disponivel: Boolean!
 }
 
 type Mutation {
-  criarRepublica(republica: CriarRepublicaInput!): ResponsePayload!
+  criarRepublica(input: CriarRepublicaInput!): ResponsePayload!
 }

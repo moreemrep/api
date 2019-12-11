@@ -15,6 +15,7 @@ export type CriarRepublicaInput = {
   localizacao: Array<Scalars['Float']>,
   tipo: Tipo,
   descricao: Scalars['String'],
+  disponivel: Scalars['Boolean'],
 };
 
 
@@ -25,7 +26,7 @@ export type Mutation = {
 
 
 export type MutationCriarRepublicaArgs = {
-  republica: CriarRepublicaInput
+  input: CriarRepublicaInput
 };
 
 export type Node = {
