@@ -19,14 +19,35 @@ export type CriarRepublicaInput = {
 };
 
 
+export type EditarRepublicaInput = {
+  nome?: Maybe<Scalars['String']>,
+  endereco?: Maybe<Scalars['String']>,
+  localizacao: Array<Scalars['Float']>,
+  tipo?: Maybe<Tipo>,
+  descricao?: Maybe<Scalars['String']>,
+  disponivel?: Maybe<Scalars['Boolean']>,
+};
+
 export type Mutation = {
    __typename?: 'Mutation',
   criarRepublica: ResponsePayload,
+  editarRepublica: ResponsePayload,
+  procurarRepublica: ProcurarRepublicaPayload,
 };
 
 
 export type MutationCriarRepublicaArgs = {
   input: CriarRepublicaInput
+};
+
+
+export type MutationEditarRepublicaArgs = {
+  input: EditarRepublicaInput
+};
+
+
+export type MutationProcurarRepublicaArgs = {
+  input: ProcurarRepublicaInput
 };
 
 export type Node = {
@@ -39,6 +60,18 @@ export type PageInfo = {
   hasPreviousPage: Scalars['Boolean'],
   startCursor?: Maybe<Scalars['String']>,
   endCursor?: Maybe<Scalars['String']>,
+};
+
+export type ProcurarRepublicaInput = {
+  localizacao: Array<Scalars['Float']>,
+  tipo: Tipo,
+};
+
+export type ProcurarRepublicaPayload = {
+   __typename?: 'ProcurarRepublicaPayload',
+  republicas: Array<RepublicaPayload>,
+  success: Scalars['Boolean'],
+  error?: Maybe<Scalars['String']>,
 };
 
 export type Query = {
@@ -57,6 +90,13 @@ export type Republica = Node & {
   nome?: Maybe<Scalars['String']>,
   tipo?: Maybe<Tipo>,
   distancia?: Maybe<Scalars['Int']>,
+};
+
+export type RepublicaPayload = {
+   __typename?: 'RepublicaPayload',
+  distancia: Scalars['Int'],
+  nome: Scalars['String'],
+  descricao?: Maybe<Scalars['String']>,
 };
 
 export type ResponsePayload = {

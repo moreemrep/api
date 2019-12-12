@@ -1,0 +1,12 @@
+input EditarRepublicaInput {
+  nome: String
+  endereco: String
+  localizacao: [Float!]!
+  tipo: Tipo
+  descricao: String
+  disponivel: Boolean
+}
+
+type Mutation {
+  editarRepublica(input: EditarRepublicaInput!): ResponsePayload!
+}
