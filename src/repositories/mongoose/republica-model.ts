@@ -3,9 +3,11 @@ const paginationPlugin = require('./plugins/mongoose-plugin-relay-pagination.js'
 
 export interface RepublicaDocument extends Document {
   uid: string;
-  devicesOwned: [string];
-  devicesInvited: [string];
-  favoriteDevice: string;
+  nome: string;
+  endereco: string;
+  localizacao: number[];
+  disponivel: boolean;
+  descricao: string;
 }
 
 export type RepublicaModel = Model<RepublicaDocument>
@@ -23,6 +25,9 @@ module.exports = (mongoose: Mongoose) => {
       required: true
     },
     endereco: {
+      type: String
+    },
+    descricao: {
       type: String
     },
     localizacao: {

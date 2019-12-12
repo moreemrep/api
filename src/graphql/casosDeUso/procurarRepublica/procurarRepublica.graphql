@@ -1,0 +1,18 @@
+input ProcurarRepublicaInput {
+  localizacao: [Float!]!
+  tipo: Tipo!
+}
+
+type RepublicaPayload {
+  distancia: Int!
+  nome: String!
+  descricao: String
+}
+
+type ProcurarRepublicaPayload inherits ResponsePayload {
+  republicas: [RepublicaPayload!]!
+}
+
+type Mutation {
+  procurarRepublica(input: ProcurarRepublicaInput!): ProcurarRepublicaPayload!
+}
