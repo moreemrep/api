@@ -20,6 +20,7 @@
     "@graphql-codegen/introspection": "1.8.2",
     "@graphql-codegen/typescript": "1.8.2",
     "@graphql-codegen/typescript-resolvers": "1.8.2",
+    "@playlyfe/gql": "^2.6.2",
     "@types/express": "^4.17.1",
     "@types/graphql": "^14.5.0",
     "@types/graphql-relay": "^0.4.11",
