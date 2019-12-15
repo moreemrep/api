@@ -1,0 +1,9 @@
+input CriarUniversidadeInput {
+  nome: String!
+  sigla: String!
+  localizacao: [Float!]!
+}
+
+type Mutation {
+  criarUniversidade(input: CriarUniversidadeInput!): ResponsePayload!
+}

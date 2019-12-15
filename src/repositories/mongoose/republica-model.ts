@@ -1,12 +1,18 @@
 import { Mongoose, Document, Model } from 'mongoose'
 const paginationPlugin = require('./plugins/mongoose-plugin-relay-pagination.js')
 
+export interface Location {
+  type: string;
+  coordinates: number[];
+}
+
 export interface RepublicaDocument extends Document {
   uid: string;
   nome: string;
   endereco: string;
-  localizacao: number[];
+  localizacao: Location;
   disponivel: boolean;
+  mostrarNoMapa: boolean;
   descricao: string;
 }
 
@@ -30,11 +36,18 @@ module.exports = (mongoose: Mongoose) => {
     descricao: {
       type: String
     },
+    tipo: {
+      type: String
+    },
     localizacao: {
       type: { type: String },
       coordinates: [Number]
     },
     disponivel: {
+      type: Boolean,
+      required: true
+    },
+    mostrarNoMapa: {
       type: Boolean,
       required: true
     }

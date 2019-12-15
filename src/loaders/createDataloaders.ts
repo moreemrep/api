@@ -2,9 +2,10 @@ import { Repositories } from '~/repositories'
 import Dataloader from 'dataloader'
 import { RepublicaDocument } from '~/repositories/mongoose/republica-model'
 import { Model, Document } from 'mongoose'
+import { UniversidadeDocument } from '~/repositories/mongoose/universidade-model'
 
 export function createDataloaders (repositories: Repositories): Loaders {
-  const { Republica } = repositories.mongoose.models
+  const { Republica, Universidade } = repositories.mongoose.models
 
   function Loader<T extends Document> (model: Model<T>): Dataloader<string, T> {
     return new Dataloader(async ids => (
@@ -18,10 +19,13 @@ export function createDataloaders (repositories: Repositories): Loaders {
   }
 
   return {
-    republica: Loader<RepublicaDocument>(Republica)
+    republica: Loader<RepublicaDocument>(Republica),
+    universidade: Loader<UniversidadeDocument>(Universidade)
+
   }
 }
 
 export interface Loaders {
   republica: Dataloader<string, RepublicaDocument>;
+  universidade: Dataloader<string, UniversidadeDocument>;
 }

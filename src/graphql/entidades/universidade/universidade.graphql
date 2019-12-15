@@ -1,0 +1,6 @@
+type Universidade implements Node {
+  id: ID!
+  nome: String
+  sigla: String
+  localizacao: [Float]
+}

@@ -1,0 +1,12 @@
+input ProcurarUniversidadeInput {
+  nome: String
+  sigla: String
+}
+
+type ProcurarUniversidadePayload inherits ResponsePayload {
+  universidades: [Universidade!]!
+}
+
+type Mutation {
+  procurarUniversidade(input: ProcurarUniversidadeInput!): ProcurarUniversidadePayload!
+}

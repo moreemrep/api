@@ -5,6 +5,8 @@ input CriarRepublicaInput {
   tipo: Tipo!
   descricao: String!
   disponivel: Boolean!
+  mostrarNoMapa: Boolean!
+
 }
 
 type Mutation {

@@ -7,7 +7,14 @@ exports.resolver = {
     criarRepublica: async (_, { input }: Input<CriarRepublicaInput>, { repositories, user }: Context): Promise<ResponsePayload> => {
       const { Republica } = repositories.mongoose.models
       try {
-        await Republica.create({ ...input, uid: user })
+        await Republica.create({
+          ...input,
+          uid: 'a00990',
+          localizacao: {
+            type: 'Point',
+            coordinates: input.localizacao
+          }
+        })
         return {
           success: true
         }
