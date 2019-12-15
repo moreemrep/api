@@ -6332,10 +6332,10 @@ schemaglue@^4.0.4:
     glob "^7.1.2"
     shortid "^2.2.8"
 
-schemalizer@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/schemalizer/-/schemalizer-1.0.1.tgz#fc5c90a176a4a79729a3d5f27c8737148f9d7064"
-  integrity sha512-IX+1cUu/U2HS0ycOgh8ncsYp8tj/XLUM1wzXEpXniRUdPpJ7HR84tSk86lD9M8gyCooLBaQf9m77V8gZVjkrWg==
+schemalizer@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/schemalizer/-/schemalizer-1.0.2.tgz#75d17cdf29f910e395d4af4d13998c227edace27"
+  integrity sha512-EBhxNE36pmp3Ekz1OtuGePlx8vw3zhKzMfof2VgyHLBi3Dr8akth1jRoJ/t29yoDsXO7xmq48eOiBASJJ0TuZw==
   dependencies:
     graphql-s2s "^0.20.2"
     schemaglue "^4.0.4"

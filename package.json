@@ -52,7 +52,7 @@
     "graphql-relay": "^0.6.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.3",
-    "schemalizer": "^1.0.1"
+    "schemalizer": "1.0.2"
   },
   "engines": {
     "node": "10.16.2",
