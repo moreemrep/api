@@ -1,3 +1,5 @@
+directive @auth on FIELD_DEFINITION
+
 interface Node {
   id: ID!
 }

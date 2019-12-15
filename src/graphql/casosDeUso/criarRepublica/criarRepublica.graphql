@@ -6,9 +6,12 @@ input CriarRepublicaInput {
   descricao: String!
   disponivel: Boolean!
   mostrarNoMapa: Boolean!
+}
 
+type CriarRepublicaPayload inherits ResponsePayload {
+  republica: RepublicaUser
 }
 
 type Mutation {
-  criarRepublica(input: CriarRepublicaInput!): ResponsePayload!
+  criarRepublica(input: CriarRepublicaInput!): CriarRepublicaPayload!
 }

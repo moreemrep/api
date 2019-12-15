@@ -10,3 +10,13 @@ type Republica implements Node {
   tipo: Tipo
   distancia: Int
 }
+
+type RepublicaUser implements Node {
+  id: ID!
+  nome: String
+  endereco: String
+  localizacao: [Float]
+  tipo: Tipo
+  mostrarNoMapa: Boolean
+  disponivel: Boolean
+}

@@ -1,0 +1,7 @@
+type LoginPayload inherits ResponsePayload {
+  republica: RepublicaUser!
+}
+
+type Mutation {
+  login: LoginPayload! @auth
+}
