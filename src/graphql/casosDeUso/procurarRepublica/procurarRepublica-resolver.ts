@@ -32,6 +32,7 @@ exports.resolver = {
         if (!universidade) throw new Error('universidade não encontrada')
         const republicas = await Republica.find(
           {
+            disponivel: true,
             localizacao: {
               $geoWithin: {
                 $centerSphere: [universidade.localizacao.coordinates, input.distancia / 1609.34 / 3963.2]
@@ -46,16 +47,25 @@ exports.resolver = {
             distancia: calcCrow(republica.localizacao.coordinates[1], republica.localizacao.coordinates[0], universidade.localizacao.coordinates[1], universidade.localizacao.coordinates[0]),
             nome: republica.nome,
             descricao: republica.descricao,
-            localizacao: republica.mostrarNoMapa ? republica.localizacao.coordinates : []
+            localizacao: republica.mostrarNoMapa ? {
+              latitude: republica.localizacao.coordinates[1],
+              longitude: republica.localizacao.coordinates[0]
+            } : null
           })),
-          centro: universidade.localizacao.coordinates
+          centro: {
+            latitude: universidade.localizacao.coordinates[1],
+            longitude: universidade.localizacao.coordinates[0]
+          }
         }
       } catch (err) {
         return {
           success: false,
           error: err.message,
           republicas: [],
-          centro: []
+          centro: {
+            latitude: 0,
+            longitude: 0
+          }
         }
       }
     }

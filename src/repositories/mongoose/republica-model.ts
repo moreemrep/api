@@ -1,4 +1,5 @@
 import { Mongoose, Document, Model } from 'mongoose'
+import { Tipo } from '~/generated/graphql'
 const paginationPlugin = require('./plugins/mongoose-plugin-relay-pagination.js')
 
 export interface Location {
@@ -14,6 +15,7 @@ export interface RepublicaDocument extends Document {
   disponivel: boolean;
   mostrarNoMapa: boolean;
   descricao: string;
+  tipo: Tipo;
 }
 
 export type RepublicaModel = Model<RepublicaDocument>

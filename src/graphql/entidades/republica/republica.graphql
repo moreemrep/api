@@ -13,10 +13,11 @@ type Republica implements Node {
 
 type RepublicaUser implements Node {
   id: ID!
-  nome: String
-  endereco: String
-  localizacao: [Float]
-  tipo: Tipo
-  mostrarNoMapa: Boolean
-  disponivel: Boolean
+  nome: String!
+  endereco: String!
+  localizacao: Coordenadas!
+  tipo: Tipo!
+  mostrarNoMapa: Boolean!
+  disponivel: Boolean!
+  descricao: String!
 }

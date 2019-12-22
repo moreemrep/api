@@ -1,0 +1,9 @@
+type Coordenadas {
+  latitude: Float!
+  longitude: Float!
+}
+
+input CoordenadasInput {
+  latitude: Float!
+  longitude: Float!
+}

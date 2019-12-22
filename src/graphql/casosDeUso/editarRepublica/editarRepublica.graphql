@@ -1,12 +1,12 @@
 input EditarRepublicaInput {
   nome: String
   endereco: String
-  localizacao: [Float!]!
+  localizacao: CoordenadasInput!
   tipo: Tipo
   descricao: String
   disponivel: Boolean
 }
 
 type Mutation {
-  editarRepublica(input: EditarRepublicaInput!): ResponsePayload!
+  editarRepublica(input: EditarRepublicaInput!): ResponsePayload! @auth
 }

@@ -7,13 +7,13 @@ input ProcurarRepublicaInput {
 type RepublicaPayload {
   distancia: Float!
   nome: String!
-  descricao: String
-  localizacao: [Float!]
+  descricao: String!
+  localizacao: Coordenadas
 }
 
 type ProcurarRepublicaPayload inherits ResponsePayload {
   republicas: [RepublicaPayload!]!
-  centro: [Float!]!
+  centro: Coordenadas!
 }
 
 type Mutation {

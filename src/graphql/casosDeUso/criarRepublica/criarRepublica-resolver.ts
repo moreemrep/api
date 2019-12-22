@@ -17,7 +17,7 @@ exports.resolver = {
           uid,
           localizacao: {
             type: 'Point',
-            coordinates: input.localizacao
+            coordinates: [input.localizacao.longitude, input.localizacao.latitude]
           }
         })
         return {
@@ -25,7 +25,10 @@ exports.resolver = {
           republica: {
             ...republica,
             id: republica._id,
-            localizacao: republica.localizacao.coordinates
+            localizacao: {
+              latitude: republica.localizacao.coordinates[1],
+              longitude: republica.localizacao.coordinates[0]
+            }
           }
         }
       } catch (err) {

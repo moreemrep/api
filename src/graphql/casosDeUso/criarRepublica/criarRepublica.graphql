@@ -1,7 +1,7 @@
 input CriarRepublicaInput {
   nome: String!
   endereco: String!
-  localizacao: [Float!]!
+  localizacao: CoordenadasInput!
   tipo: Tipo!
   descricao: String!
   disponivel: Boolean!

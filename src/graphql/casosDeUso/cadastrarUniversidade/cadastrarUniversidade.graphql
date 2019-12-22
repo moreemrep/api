@@ -1,7 +1,7 @@
 input CriarUniversidadeInput {
   nome: String!
   sigla: String!
-  localizacao: [Float!]!
+  localizacao: CoordenadasInput!
 }
 
 type Mutation {
