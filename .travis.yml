@@ -6,7 +6,6 @@ addons:
   sonarcloud:
     organization: 'moreemrep'
 
-
 cache:
   - npm
   - yarn
