@@ -23,7 +23,10 @@ beforeAll(() => {
   return instance
 })
 
-afterEach(() => connection.dropDatabase())
+afterEach(async () => {
+  await redis.flushall()
+  return connection.dropDatabase()
+})
 
 afterAll(async () => {
   await connection.close()
