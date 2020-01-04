@@ -23,12 +23,17 @@ exports.resolver = {
         return {
           success: true,
           republica: {
-            ...republica,
             id: republica._id,
             localizacao: {
               latitude: republica.localizacao.coordinates[1],
               longitude: republica.localizacao.coordinates[0]
-            }
+            },
+            descricao: republica.descricao,
+            disponivel: republica.disponivel,
+            endereco: republica.endereco,
+            mostrarNoMapa: republica.mostrarNoMapa,
+            nome: republica.nome,
+            tipo: republica.tipo
           }
         }
       } catch (err) {

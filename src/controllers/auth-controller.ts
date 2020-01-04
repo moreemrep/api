@@ -1,24 +1,27 @@
-module.exports = ({ repositories, services }) => {
-  const { User } = repositories.mongoose.models
-  const { redis, firebase } = services
+import { Context } from '~/apollo'
 
-  async function verifyToken (token) {
-    const { uid } = await firebase.verifyIdToken(token)
-    const _id = await redis.get(uid)
-    if (_id) return _id
+// todo: transform to utils
+module.exports = ({ repositories, services }: Context) => {
+  // const { User } = repositories.mongoose.models
+  // const { redis, firebase } = services
 
-    const user = await User.get({ uid }, { _id: 1 })
-    await redis.set(uid, user._id.toString())
-    return user._id
-  }
+  // async function verifyToken (token) {
+  //   const { uid } = await firebase.verifyIdToken(token)
+  //   const _id = await redis.get(uid)
+  //   if (_id) return _id
 
-  return {
-    verifyToken,
+  //   const user = await User.get({ uid }, { _id: 1 })
+  //   await redis.set(uid, user._id.toString())
+  //   return user._id
+  // }
 
-    verifyTokenSubscription: async token => {
-      const id = await verifyToken(token)
-      if (!id) throw new Error('UNAUTHENTICATED')
-      return id
-    }
-  }
+  // return {
+  //   verifyToken,
+
+  //   verifyTokenSubscription: async token => {
+  //     const id = await verifyToken(token)
+  //     if (!id) throw new Error('UNAUTHENTICATED')
+  //     return id
+  //   }
+  // }
 }

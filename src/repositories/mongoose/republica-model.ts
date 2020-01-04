@@ -9,6 +9,7 @@ export interface Location {
 
 export interface RepublicaDocument extends Document {
   uid: string;
+  email: string;
   nome: string;
   endereco: string;
   localizacao: Location;
@@ -25,6 +26,10 @@ module.exports = (mongoose: Mongoose) => {
 
   const schema = {
     uid: {
+      type: String,
+      required: true
+    },
+    email: {
       type: String,
       required: true
     },

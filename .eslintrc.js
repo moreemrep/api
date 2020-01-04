@@ -15,5 +15,9 @@ module.exports = {
   },
   rules: {
     'import/no-unresolved': 'off'
+  },
+  env: {
+    node: true,
+    jest: true
   }
 }
