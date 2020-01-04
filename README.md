@@ -1,0 +1,13 @@
+[![Build Status](https://travis-ci.com/moreemrep/api.svg?branch=master)](https://travis-ci.com/moreemrep/api)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=moreemrep_api&metric=coverage)](https://sonarcloud.io/dashboard?id=moreemrep_api)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=moreemrep_api&metric=alert_status)](https://sonarcloud.io/dashboard?id=moreemrep_api)
+[![Maintainability](https://sonarcloud.io/api/project_badges/measure?project=moreemrep_api&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=moreemrep_api)
+[![Reliability](https://sonarcloud.io/api/project_badges/measure?project=moreemrep_api&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=moreemrep_api)
+[![Security](https://sonarcloud.io/api/project_badges/measure?project=moreemrep_api&metric=security_rating)](https://sonarcloud.io/dashboard?id=moreemrep_api)
+
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=moreemrep_api&metric=ncloc)](https://sonarcloud.io/dashboard?id=moreemrep_api)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=moreemrep_api&metric=code_smells)](https://sonarcloud.io/dashboard?id=moreemrep_api)
+[![Duplicated Lines](https://sonarcloud.io/api/project_badges/measure?project=moreemrep_api&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=moreemrep_api)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=moreemrep_api&metric=bugs)](https://sonarcloud.io/dashboard?id=moreemrep_api)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=moreemrep_api&metric=sqale_index)](https://sonarcloud.io/dashboard?id=moreemrep_api)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=moreemrep_api&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=moreemrep_api)
