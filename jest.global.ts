@@ -6,6 +6,6 @@ import jwt from 'jsonwebtoken'
 global.request = () => request(app).post('/graphql')
 
 global.token = {
-  registered: jwt.sign({ uid: 'j4XbuF0Woha5Eexegbgusvy7KRc2', email: 'rafaelnsantos1@gmail.com' }, 'sh'),
+  registered: jwt.sign({ uid: '123', email: 'test@test.com' }, 'sh'),
   unregistered: jwt.sign({ uid: '1s', email: 'test@yest.com' }, 'sh')
 }
