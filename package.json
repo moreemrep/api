@@ -50,7 +50,7 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "apollo-server-express": "^2.9.4",
+    "apollo-server-express": "^2.14.2",
     "async-redis": "^1.1.7",
     "cors": "^2.8.5",
     "dataloader": "^1.4.0",
